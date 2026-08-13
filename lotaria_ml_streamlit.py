@@ -196,9 +196,12 @@ def badge_liberacao(sorteio: str, minutos_atual: int) -> str:
 
 
 @st.cache_resource
-def get_analyzer() -> AnalisadorLotaria:
+def get_analyzer(_versao: str = "2026-08-13-v2") -> AnalisadorLotaria:
     """Montei o repositório conforme os secrets.
     Sem secrets uso CSV local; na Cloud uso Supabase se estiver definido.
+
+    O parâmetro _versao serve só para invalidar o cache do Streamlit
+    quando a lógica do AnalisadorLotaria muda. Não afeta o comportamento.
     """
     backend = st.secrets.get("BACKEND", "csv")
     try:
