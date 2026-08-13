@@ -6,7 +6,7 @@ lotaria_core.py; aqui só trato da apresentação.
 
 Corro com: streamlit run lotaria_ml_streamlit.py
 """
-
+import re
 import warnings
 from datetime import datetime
 
