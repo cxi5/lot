@@ -1,0 +1,8 @@
+.streamlit/secrets.toml
+resultados_lotaria_angola.csv
+backups_lotaria/
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+sugestoes_bloqueadas.json
